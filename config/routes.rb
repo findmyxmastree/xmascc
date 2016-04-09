@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :registrations
   get 'order_items/create'
 
   get 'order_items/update'
@@ -10,12 +11,16 @@ Rails.application.routes.draw do
   get 'products/index'
   
   Rails.application.routes.draw do
+  resources :registrations
   resources :products, only: [:index]
   resource :cart, only: [:show]
   resources :order_items, only: [:create, :update, :destroy]
   root to: "products#index"
 end
 
+post "/registrations/:id" => "registrations#show"
+  post "/hook" => "regstrations#hook"
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   root to: "products#index"
 end
 
-post "/registrations/:id" => "registrations#show"
+  post "/registrations/:id" => "registrations#show"
   post "/hook" => "regstrations#hook"
   
   # The priority is based upon order of creation: first created -> highest priority.

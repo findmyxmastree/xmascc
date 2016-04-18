@@ -80,7 +80,7 @@ class RegistrationsController < ApplicationController
       params.require(:registration).permit(:email, :string, :password, :string)
     end
 end
-protect_from_forgery except: [:hook]
+ protect_from_forgery except: [:hook]
   def hook
     params.permit! # Permit all Paypal input params
     status = params[:payment_status]

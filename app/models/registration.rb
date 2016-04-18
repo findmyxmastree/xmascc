@@ -12,7 +12,7 @@ class Registration < ActiveRecord::Base
         quantity: '1'
     }
     "#{Rails.application.secrets.paypal_host}/cgi-bin/webscr?" + values.to_query
-  end
+ end
   serialize :notification_params, Hash
   def paypal_url(return_path)
     values = {

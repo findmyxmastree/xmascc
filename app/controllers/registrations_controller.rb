@@ -1,4 +1,5 @@
-class RegistrationsController < ApplicationController
+
+ class RegistrationsController < ApplicationController
   before_action :set_registration, only: [:show, :edit, :update, :destroy]
 
   # GET /registrations

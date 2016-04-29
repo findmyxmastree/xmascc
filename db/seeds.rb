@@ -8,9 +8,9 @@
 
 
 Product.delete_all
-Product.create! id: 1, name: "American Spruce", price: 0.49, active: true
-Product.create! id: 2, name: "Delux Tree Stand", price: 10.29, active: true
-Product.create! id: 3, name: "Holly Wreath", price: 1.99, active: true
+Product.create! id: 1, name: "American Spruce", description: "It's lovely!", price: 0.49, active: true
+Product.create! id: 2, name: "Delux Tree Stand", description: "It's lovely!", price: 10.29, active: true
+Product.create! id: 3, name: "Holly Wreath", description: "It's lovely!", price: 1.99, active: true
 
 OrderStatus.delete_all
 OrderStatus.create! id: 1, name: "In Progress"
